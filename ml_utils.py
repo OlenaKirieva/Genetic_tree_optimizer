@@ -49,7 +49,7 @@ def auroc_train_and_val(model, X_train, X_val, train_targets, val_targets):
     # Plot ROC curves
     plt.figure(figsize=(6, 4))
     plt.plot(fpr_train, tpr_train, label=f"Train ROC (AUC = {auc_train:.4f})")
-    plt.plot(fpr_val, tpr_val, label=f"Validation ROC (AUC = {auc_val:.4f})")
+    plt.plot(fpr_val, tpr_val, label=f"Test ROC (AUC = {auc_val:.4f})")
     plt.plot([0, 1], [0, 1], linestyle='--', color='green')
 
     plt.xlabel('False Positive Rate')
@@ -102,3 +102,4 @@ def predict_and_plot(model, inputs, targets, name=''):
 
     # Print report with fixed decimal formatting
     print(df_report.round(3))
+
