@@ -21,22 +21,7 @@ The target variable **"Exited"** is severely imbalanced:
 
 Correct detection of the minority class (1) is critical.
 
-The data is split into three subsets:
-
-```python
-X_train = data['X_train']
-train_targets = data['y_train']
-
-X_val = data['X_val']
-val_targets = data['y_val']
-
-X_train, X_test, train_targets, test_targets = train_test_split(
-    X_train, train_targets,
-    test_size=0.2,
-    stratify=train_targets,
-    random_state=42
-)
-```
+The data is split into three subsets: train, validation and test.
 
 ---
 
@@ -152,7 +137,7 @@ Test  AUC: 0.9126
 
 ---
 
-## **5. Discussion and Key Observations**
+## **5. Observations**
 
 1. **Genetic Algorithm achieved slightly better validation AUC (0.9202)** compared to Random Search (0.9193).
 2. Both models demonstrated **similar test AUC (≈0.914)**, confirming robustness.
@@ -174,54 +159,12 @@ Under constrained computation, GA provides a competitive alternative to classica
 ```
 ├── ml_utils.py               # ROC AUC plotting and evaluation functions
 ├── genetic_search.py         # Genetic Algorithm implementation
-├── random_search.py          # Random Search pipeline
 ├── process_bank_churn.py     # Data preprocessing
 ├── notebooks/
-│   └── experiments.ipynb     # Full workflow, experiments, plots
+│   └── experiments_and_results.ipynb     # Full workflow, experiments, plots
 └── README.md                 # Project documentation
 ```
 
----
 
-## **8. Requirements**
 
-```
-numpy
-pandas
-scikit-learn
-matplotlib
-seaborn
-```
-
----
-
-## **9. Usage**
-
-Example of running GA:
-
-```python
-best_params, best_score = genetic_algorithm_improved(
-    X_train, X_val, train_targets, val_targets, params_dt
-)
-```
-
-Example of evaluating final model:
-
-```python
-final_model = DecisionTreeClassifier(random_state=42, **best_params)
-final_model.fit(X_train, train_targets)
-auroc_train_and_val(final_model, X_train, X_test, train_targets, test_targets)
-```
-
----
-
-Якщо хочете, можу:
-
-✅ оформити README у Markdown-файл з форматуванням таблиць
-✅ додати математичні формули (LaTeX)
-✅ зробити графіки або схему роботи GA
-✅ написати секцію “Limitations & Future Work”
-✅ оформити варіант README українською мовою
-
-Скажіть, чи потрібно доповнити.
 
