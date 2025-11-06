@@ -157,13 +157,13 @@ Under constrained computation, GA provides a competitive alternative to classica
 ## **7. Repository Structure**
 
 ```
-project/
-├── experiments_and_results.ipynb     # Full workflow, experiments, plots
-├── README.md                 # Project documentation
-├── bank-customer-churn-prediction.csv # Data
-├── genetic_search.py         # Genetic Algorithm implementation
-├── ml_utils.py               # ROC AUC plotting and evaluation functions
-└── process_bank_churn.py     # Data preprocessing
+Genetic_tree_optimizer/
+├── experiments_and_results.ipynb         # Full workflow, experiments, plots
+├── README.md                             # Project documentation
+├── bank-customer-churn-prediction.csv    # Data
+├── genetic_search.py                     # Genetic Algorithm implementation
+├── ml_utils.py                           # ROC AUC plotting and evaluation functions
+└── process_bank_churn.py                 # Data preprocessing
 ```
 
 
