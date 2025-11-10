@@ -1,6 +1,6 @@
 # Hyperparameter Optimization for Decision Tree Classifier Using Genetic Algorithm and Random Search
 
-This repository contains an empirical study of hyperparameter optimization methods for a **Decision Tree Classifier** applied to an imbalanced binary classification dataset.
+This repository contains an empirical study of hyperparameter optimization methods for a **Decision Tree Classifier** applied to an imbalanced binary classification dataset. 
 Two optimization strategies are compared:
 
 1. **Genetic Algorithm (GA)**
